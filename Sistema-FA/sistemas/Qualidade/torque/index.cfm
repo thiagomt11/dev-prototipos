@@ -35,15 +35,15 @@
                 <span>Calibração</span>
             </a>
             
-            <a href="#">
+            <a href="#" onclick="carregarConteudo('monitorias.cfm')">
                 <span>Monitorias</span>
             </a>
 
-            <a href="#">
+            <a href="#" onclick="carregarConteudo('relatorios.cfm')">
                 <span>Relatórios</span>
             </a>
 
-            <a href="#">
+            <a href="#" onclick="carregarConteudo('requisicoes.cfm')">
                 <span>Requisições de Compra</span>
             </a>
 
