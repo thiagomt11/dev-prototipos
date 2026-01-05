@@ -6,6 +6,7 @@
     <title>Gestão Final Assembly</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body onresize="mudouTamanho()">
     <header>
@@ -23,9 +24,17 @@
                 </div>
             
                 <menu id="itens">
-                    <span class="txt-itens"><a href="#">Perfil</a></span>
-                    <span class="txt-itens"><a href="#">Configurações</a></span>
-                    <span class="txt-itens"><a href="#">Sair</a></span>
+                    <div class="txt-itens">
+                        <a href="#"><span class="material-symbols-outlined">person</span>Editar Perfil</a>
+                    </div>
+
+                    <div class="txt-itens">
+                        <a href="#"><span class="material-symbols-outlined">settings</span>Configurações</a>
+                    </div>
+
+                    <div class="txt-itens" id="logout">
+                        <a href="login.html"><span class="material-symbols-outlined">logout</span>Sair</a>
+                    </div>
                 </menu>
             </div> 
         </div>
@@ -63,13 +72,15 @@
                 </div>
             </section>
 
-            <section id="qualidade" class="card">
-                <img src="imagens/img-qualidade.jpeg" alt="imagem qualidade">
-                <div class="card-content">
-                    <h2>Qualidade</h2>
-                    <p>Gestão de qualidade, controle de defeitos/avarias e melhoria contínua</p>
-                </div>
-            </section>
+            <a class= "card-link" href="sistemas/Qualidade/menu_qualidade.html" target="_blank">
+                <section id="qualidade" class="card">
+                    <img src="imagens/img-qualidade.jpeg" alt="imagem qualidade">
+                    <div class="card-content">
+                        <h2>Qualidade</h2>
+                        <p>Gestão de qualidade, controle de defeitos/avarias e melhoria contínua</p>
+                    </div>
+                </section>
+            </a>
 
             <section id="entrega" class="card">
                 <img src="imagens/img-entrega.jpeg" alt="imagem entrega">
@@ -94,14 +105,16 @@
 
         function mudouTamanho() {
             if (window.innerWidth >= 769) {
-                itens.style.display = 'flex'
-            } else {
-                itens.style.display = 'none'
+                itens.classList.add('ativo')
+            } 
+            else {
+                itens.classList.remove('ativo')
             }
         }
 
+
         function clickMenu() {
-            itens.style.display = itens.style.display === 'flex' ? 'none' : 'flex'
+            itens.classList.toggle('ativo')
         }
 
         window.addEventListener('resize', mudouTamanho)

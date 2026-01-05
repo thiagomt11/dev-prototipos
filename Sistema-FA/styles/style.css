@@ -104,30 +104,49 @@ menu{
     margin: 0;
     border: 1px solid whitesmoke;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-#itens span{
-    padding: 8px 45px;
+#itens.ativo {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+#itens div{
+    padding: 8px 37px;
     background-color: white;
     font-size: 1.1em;
     border-radius: 10px;
 }
 
-#itens span a{
+#itens div a{
     text-decoration: none;
     color: #00005A;
     font-weight: bolder;
 }
 
-#itens span:hover{
+#itens div:hover{
     background-color: #f3f3f3;
     border-radius: 0px;
 }
 
+#itens span{
+    vertical-align: top;
+}
+
 .txt-itens{
-    text-align: center;
-    padding: 10px 0;
+    padding: 0px 0;
     cursor: pointer;
+    display: flex;
+}
+
+#logout a:hover{
+    color: red;
+    transition: 0.2s;
 }
 
 header > h1{
@@ -164,6 +183,13 @@ main{
     max-width: 70%; 
     margin: 0 auto;
 }
+
+.card-link{
+  text-decoration: none;
+  color: inherit;
+  display: block; /* garante que o link “abrace” o card */
+}
+
 
 .card{
     background-color: #F6F6F6;
