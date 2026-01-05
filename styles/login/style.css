@@ -129,6 +129,24 @@ div{
 }
 
 
-@media screen and (max) {
+@media screen and (max-width:501px) {
     
+    #login{
+        width: 300px;
+    }
+
+    .input-box{
+        width: 100%;
+        justify-items: center;
+    }
+
+    #btn-login{
+        width: 250px;
+        display: block;
+        margin: auto;
+    }
+
+    .input-box:focus{
+        border: 1px solid #ccc;
+    }
 }
