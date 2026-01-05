@@ -85,9 +85,49 @@ header{
 
 #options-header{
     display: flex;
-    flex-direction: row;
-    gap: 45px;
-    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+menu{
+    display: none;
+}
+
+#itens{
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: calc(3.7em + 10px);
+    padding: 0;
+    border-radius: 5px;
+    margin: 0;
+    border: 1px solid whitesmoke;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+#itens span{
+    padding: 8px 45px;
+    background-color: white;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+#itens span a{
+    text-decoration: none;
+    color: #00005A;
+    font-weight: bolder;
+}
+
+#itens span:hover{
+    background-color: #f3f3f3;
+    border-radius: 0px;
+}
+
+.txt-itens{
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
 }
 
 header > h1{

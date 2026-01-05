@@ -7,20 +7,27 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <div id="header-wid">
             <h1>Gestão Final Assembly</h1>
             
             <div id="options-header">
-                <div id="logo-usuario">
+                
+                <div id="logo-usuario" onclick="clickMenu()">
                     <img src="https://github.com/shadcn.png" alt="Imagem Usuario">
                     <div id="username">
                         <a href="#" id="nome">Thiago Martins</a>
                         <a href="#" id="funcao">Assistente de Processos</a>
                     </div>
                 </div>
-            </div>
+            
+                <menu id="itens">
+                    <span class="txt-itens"><a href="#">Perfil</a></span>
+                    <span class="txt-itens"><a href="#">Configurações</a></span>
+                    <span class="txt-itens"><a href="#">Sair</a></span>
+                </menu>
+            </div> 
         </div>
     </header>
 
@@ -81,5 +88,25 @@
             </section>
         </div>
     </main>
+
+    <script>
+        const itens = document.getElementById('itens')
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 769) {
+                itens.style.display = 'flex'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            itens.style.display = itens.style.display === 'flex' ? 'none' : 'flex'
+        }
+
+        window.addEventListener('resize', mudouTamanho)
+        window.addEventListener('load', mudouTamanho)
+    </script>
+
 </body>
 </html>
