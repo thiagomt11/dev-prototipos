@@ -2,14 +2,9 @@
 
 
 function abrirMenu() {
-    var menu = document.getElementById('menu-lateral');
-    menu.classList.toggle('menu-oculto');
+  const menu = document.getElementById('menu-lateral');
+  const isOculto = menu.classList.toggle('menu-oculto'); // true se ficou oculto
 
-    /* Condição para o id principal ficar com blur de 2px caso o menu esteja aberto */
-    var principal = document.getElementById('principal');
-    if (menu.classList.contains('menu-oculto')) {
-        principal.style.filter = 'none';
-    } else {
-        principal.style.filter = 'blur(5px)';
-    }
+  // blur só quando o menu estiver aberto (não oculto)
+  document.body.classList.toggle('menu-aberto', !isOculto);
 }

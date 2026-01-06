@@ -14,7 +14,6 @@ Dispositivos até 480px (celulares pequenos)
     border: 1px solid var(--cinza-claro);
     border-radius: 8px;
     padding: 2px;
-    width: 300px;
     margin: auto;
     width: 90%;
 }
@@ -50,4 +49,12 @@ Dispositivos até 480px (celulares pequenos)
     font-size: 0.65em;
     text-align: center;
     color: var(--cinza-fonte);
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.65em;
 }

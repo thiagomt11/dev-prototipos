@@ -51,3 +51,11 @@ Dispositivos entre 481px e 768px (tablets e celulares grandes)
     text-align: center;
     color: var(--cinza-fonte);
 }
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.65em;
+}

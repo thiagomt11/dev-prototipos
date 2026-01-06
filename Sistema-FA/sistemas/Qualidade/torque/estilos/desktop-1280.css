@@ -34,3 +34,8 @@
 #btn-menu {
     display: none;
 }
+
+
+#principal {
+    filter: none !important;
+  }

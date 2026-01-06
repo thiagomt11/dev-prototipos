@@ -98,7 +98,7 @@ body{
 
 #nome{
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.15em;
     text-align: center;
 }
 
@@ -155,10 +155,8 @@ hr{
     flex-direction: row;
     align-items: center;
     gap: 3px;
-    font-size: 0.65em;
+    font-size: 0.9em;
 }
-
-
 
 /* Conteúdo principal */
 
@@ -170,6 +168,9 @@ hr{
 
     min-width: 0;
     flex: 1;
+
+    filter: blur(5px);
+    transition: filter 0.3s ease;
 }
 
 #btn-menu{
