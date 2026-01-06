@@ -6,58 +6,86 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gestão Torque - Trim Shop</title>
-  <link rel="stylesheet" href="estilos/index.css"/>
-  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="estilos/mobile.css" media="screen and (max-width: 768px)"/>
+  <link rel="stylesheet" href="estilos/desktop.css" media="screen and (min-width: 769px)"/>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <script src="scripts/app.js" defer></script>
 </head>
 
 <body>
     <!-- Menu lateral -->
     <aside id="menu-lateral">
         <!-- Cabeçalho do menu lateral, contendo a foto, nome e outras informações do usuário -->
-        <div>
+        <div id="cabecalho-menu">
             <a href="#">
-                <h3>FOTO USUARIO</h3>
-                <span>Thiago Martins</span>
+                <img src="imagens/user.jpg" alt="Foto do Usuário" id="foto-usuario"/>
             </a>
+            <span>
+                <p id="nome">Thiago Martins</p> 
+                <p id="funcao">Assistente de Processos</p>
+            </span>
         </div>
-
+        <hr>
         <!-- Itens do menu lateral, para acessar o menu principal, estoque, menu de calibração, relatoório etc. -->
         <nav>
             <a href="#" onclick="carregarConteudo('dashboard.cfm')">
-                <span>Dashboard</span>
+                <div class="icon">
+                    <span class="material-symbols-outlined">bar_chart</span>
+                    <span>Dashboard</span>
+                </div>
             </a>
 
             <a href="#" onclick="carregarConteudo('ferramentas.cfm')">
-                <span>Ferramentas</span>
+                <div class="icon">
+                    <span class="material-symbols-outlined">build</span>
+                    <span>Controle de Ferramentas</span>
+                </div>
             </a>
 
             <a href="#" onclick="carregarConteudo('calibracao.cfm')">
-                <span>Calibração</span>
+                <div class="icon">
+                    <span class="material-symbols-outlined">check</span>
+                    <span>Calibração</span>
+                </div>
             </a>
             
             <a href="#" onclick="carregarConteudo('monitorias.cfm')">
-                <span>Monitorias</span>
+                <div class="icon">
+                    <span class="material-symbols-outlined">Assignment</span>
+                    <span>Monitorias</span>
+                </div>
             </a>
 
             <a href="#" onclick="carregarConteudo('relatorios.cfm')">
-                <span>Relatórios</span>
+                <div class="icon">
+                    <span class="material-symbols-outlined">Article</span>
+                    <span>Relatórios</span>
+                </div>
             </a>
 
             <a href="#" onclick="carregarConteudo('requisicoes.cfm')">
-                <span>Requisições de Compra</span>
+                <div class="icon">
+                    <span class="material-symbols-outlined">Attach_Money</span>
+                    <span>Requisições de Compra</span>
+                </div>
             </a>
 
             <a href="#">
-                <span>###########</span>
+                <div class="icon">
+                    <span class="material-symbols-outlined">Database</span>
+                    <span>ToolsNet</span>
+                </div>
             </a>
         </nav>
     </aside>
 
     <!-- Div principal que contém o cabeçalho e o conteúdo principal da página -->
-    <div>
+    <div id="principal">
         <!-- Cabeçalho (Barra de Pesquisa / Botao de Acesso ao menu lateral) -->
         <header>
-            <button type="button" id="btn-menu">
+            <button type="button" id="btn-menu" onclick="abrirMenu()">
                 ☰
             </button>
 

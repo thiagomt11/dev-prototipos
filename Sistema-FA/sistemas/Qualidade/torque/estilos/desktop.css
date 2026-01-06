@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/* 
+Mobile styles - Conceito de Mobile First - Primeiro desenvolvemos para mobile e depois para desktop
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --fonte-principal: 'Inter', sans-serif;
+    --azul-escuro: #00005A;
+    --azul-secundario: #0000bb;
+    --azul-terciario: rgba(29, 29, 87, 0.2);
+    --cinza-fonte: #414141;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+#menu-lateral{
+    width: 255px;
+    height: 100vh;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+
+    /*I.A*/
+    transition: width 0.5s ease-in-out; /* Animação suave de 0.45 segundos */
+    overflow: hidden;            /* Esconde o texto/ícones quando o menu encolher */
+    white-space: nowrap;         /* Impede que o texto quebre linha ao encolher */
+}
+
+/* I.A */
+.menu-oculto {
+    width: 0 !important; /* Força a largura a ser 0 */
+    padding: 0 !important; /* Remove preenchimento se houver */
+    border: none; /* Remove bordas para sumir completamente */
+}
+
+#cabecalho-menu{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    padding: 5px;
+    align-items: center;
+    gap: 5px;
+}
+
+#cabecalho-menu > a{
+    display: flex;
+    justify-content: center;
+}
+
+#foto-usuario{
+    margin-top: 10px;
+    width: 35%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#nome{
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#funcao{
+    font-weight: normal;
+    font-size: 0.8em;
+    text-align: center;
+    color: var(--cinza-fonte);
+}
+
+hr{
+    width: 98%;
+    margin: auto;
+    border-radius: 20px;
+    color: black;
+}
+
+
+#menu-lateral > nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+#menu-lateral > nav a{
+    display: block;
+    margin: 2px auto;
+    width: 96%;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--cinza-fonte);
+    font-weight: bold;
+    transition: background-color 0.45s ease;
+}
+
+#menu-lateral > nav a:hover{
+    background-color: var(--azul-terciario);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 2px solid var(--azul-secundario);
+}
+
+#menu-lateral > nav a:focus{
+    color: var(--azul-secundario);
+    background-color: var(--azul-terciario);
+    border-right: 2px solid var(--azul-secundario);
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    margin-left: 5px;
+}
+
+#principal{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+
