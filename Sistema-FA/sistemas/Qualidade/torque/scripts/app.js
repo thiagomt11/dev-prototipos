@@ -27,3 +27,76 @@ function syncLayout(e) {
 mql.addEventListener('change', syncLayout);
 syncLayout(mql); // roda uma vez ao carregar
 
+
+// Usamos window.carregarConteudo para garantir que o HTML enxergue a função
+window.carregarConteudo = function(arquivo) {
+    
+    // 1. Pega a área principal pelo ID que criamos
+    var container = document.getElementById('conteudo-dinamico');
+
+    // Verifica se o container existe antes de continuar
+    if (!container) {
+        console.error('Erro: Elemento com id "conteudo-dinamico" não foi encontrado no HTML.');
+        return;
+    }
+
+    // 2. Carrega o arquivo solicitado
+    fetch(arquivo)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o arquivo: ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(html => {
+            // 3. Coloca o HTML novo dentro da tag <main>
+            container.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            container.innerHTML = '<p style="color:red; padding:20px;">Erro ao carregar o conteúdo. Verifique o console (F12).</p>';
+        });
+}
+
+// 1. Função principal de carregar conteúdo
+window.carregarConteudo = function(arquivo) {
+    
+    var container = document.getElementById('conteudo-dinamico');
+
+    if (!container) {
+        console.error('Erro: ID conteudo-dinamico não encontrado.');
+        return;
+    }
+
+    // --- NOVO: Salva a página atual na memória do navegador ---
+    localStorage.setItem('ultimaPaginaAcessada', arquivo);
+    // ---------------------------------------------------------
+
+    fetch(arquivo)
+        .then(response => {
+            if (!response.ok) throw new Error(response.statusText);
+            return response.text();
+        })
+        .then(html => {
+            container.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            container.innerHTML = '<p>Erro ao carregar.</p>';
+        });
+}
+
+// 2. --- NOVO: Executa assim que a página abre (F5) ---
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Tenta pegar o que estava salvo
+    const paginaSalva = localStorage.getItem('ultimaPaginaAcessada');
+
+    if (paginaSalva) {
+        // Se tinha algo salvo, carrega ele
+        carregarConteudo(paginaSalva);
+    } else {
+        // Se é a primeira vez, carrega o Dashboard padrão
+        carregarConteudo('dashboard.cfm');
+    }
+});

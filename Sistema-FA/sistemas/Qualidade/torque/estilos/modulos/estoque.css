@@ -1,0 +1,89 @@
+
+/* Container Principal */
+.pagina-ferramentas {
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.pagina-ferramentas .topo-modulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pagina-ferramentas h2 {
+    margin: 0;
+    color: #333;
+}
+
+/* Botões */
+.pagina-ferramentas .btn-adicionar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagina-ferramentas .btn-adicionar:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Tabela */
+
+.tabela-dados {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.tabela-dados tr{
+    box-sizing: border-box;
+}
+
+.pagina-ferramentas .tabela-dados th,
+.pagina-ferramentas .tabela-dados td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.pagina-ferramentas .tabela-dados th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+}
+
+/* Tags de Status */
+.pagina-ferramentas .tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+.pagina-ferramentas .tag.disponivel {
+    background: #d4edda;
+    color: #155724;
+}
+
+.col-acoes > button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.col-acoes > button:hover{
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}

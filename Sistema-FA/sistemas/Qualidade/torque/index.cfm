@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="estilos/tablet-992.css" media="screen and (min-width: 769px) and (max-width: 992px)"/>
     <link rel="stylesheet" href="estilos/notebooks-1279.css" media="screen and (min-width: 993px) and (max-width: 1279px)"/>
     <link rel="stylesheet" href="estilos/desktop-1280.css" media="screen and (min-width: 1280px)"/>
+
+    <!-- Importando arquivos css para os modulos específicos -->
+    <link rel="stylesheet" href="estilos/modulos/ferramentas.css" />
+    <link rel="stylesheet" href="estilos/modulos/calibracao.css" />
+    <link rel="stylesheet" href="estilos/modulos/monitorias.css" />
+    <link rel="stylesheet" href="estilos/modulos/relatorios.css" />
+    <link rel="stylesheet" href="estilos/modulos/requisicoes.css" />
+    <link rel="stylesheet" href="estilos/modulos/dashboard.css" />
     
     <!-- Importação de ícones do Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-
-    <!-- Importação do arquivo JavaScript principal -->
-    <script src="scripts/app.js" defer></script>
 </head>
 
 <body>
@@ -111,13 +116,14 @@
         </header>
         
         <!-- Codigo Principal - Todo o conteudo do dashboard (outras paginas serao em outros arquivos .html) -->
-        <main >
+        <main id="conteudo-dinamico">
             <section>
                 <h2>Teste</h2>
                 <p>Aqui entrarão as páginas, cards, tabelas, etc.</p>
             </section>
         </main>
     </div>
-    
+    <!-- Importação do arquivo JavaScript principal -->
+    <script src="scripts/app.js"></script>
 </body>
 </html>
