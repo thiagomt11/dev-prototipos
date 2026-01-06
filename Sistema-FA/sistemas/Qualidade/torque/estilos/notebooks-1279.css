@@ -15,3 +15,15 @@
     margin: auto;
     width: 45%;
 }
+
+#btn-fechar {
+    position: absolute;
+    top: 4px; 
+    right: 4px; 
+    background: transparent; 
+    border: none;   
+    cursor: pointer; 
+    color: var(--cinza-fonte);
+    z-index: 10;
+    padding: 5px;
+}
