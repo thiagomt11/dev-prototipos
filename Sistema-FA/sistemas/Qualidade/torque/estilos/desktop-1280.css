@@ -1,0 +1,17 @@
+@charset "UTF-8";
+ 
+ /* 
+ Desktop styles - Para telas maiores que 1280px
+ */
+
+.search-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    padding: 2px;
+    margin: auto;
+    width: 45%;
+}

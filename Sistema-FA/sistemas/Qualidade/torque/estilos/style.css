@@ -1,19 +1,36 @@
 @charset "UTF-8";
 
-/* 
-Mobile styles - Conceito de Mobile First - Primeiro desenvolvemos para mobile e depois para desktop
+/*
+Todos os estilos gerais do sistema
 */
 
+
+/*Importação de Fonte Principal*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Variaveis de cores*/
 :root{
     --fonte-principal: 'Inter', sans-serif;
     --azul-escuro: #00005A;
     --azul-secundario: #0000bb;
     --azul-terciario: rgba(29, 29, 87, 0.2);
     --cinza-fonte: #414141;
+    --cinza-claro: #cacaca;
 }
 
+/* Transição para aparecer na tela ao atulizar/abrir */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Reset e Configurações gerais*/
 *{
     margin: 0;
     padding: 0;
@@ -24,27 +41,39 @@ Mobile styles - Conceito de Mobile First - Primeiro desenvolvemos para mobile e 
 body{
     display: flex;
     flex-direction: row;
+    animation: aparecer 0.4s ease-in-out;
+    overflow-x: hidden;
 }
 
+/* Menu lateral */
 #menu-lateral{
-    width: 255px;
+    width: 220px;
     height: 100vh;
     background-color: #fafafa;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
 
     /*I.A*/
-    transition: width 0.5s ease-in-out; /* Animação suave de 0.45 segundos */
+    transition: width 0.45s ease-in-out; /* Animação suave de 0.45 segundos */
     overflow: hidden;            /* Esconde o texto/ícones quando o menu encolher */
     white-space: nowrap;         /* Impede que o texto quebre linha ao encolher */
+
+    /* Deixe de usar relative e use fixed */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    
+    /* Z-index alto garante que ele fique na frente de tudo (tabelas, textos, imagens) */
+    z-index: 1000;
 }
 
-/* I.A */
 .menu-oculto {
     width: 0 !important; /* Força a largura a ser 0 */
     padding: 0 !important; /* Remove preenchimento se houver */
     border: none; /* Remove bordas para sumir completamente */
 }
 
+
+/* Cabeçalho do menu lateral (Foto e nome) */
 #cabecalho-menu{
     display: flex;
     flex-direction: column;
@@ -57,27 +86,29 @@ body{
 #cabecalho-menu > a{
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 
 #foto-usuario{
     margin-top: 10px;
-    width: 35%;
+    width: 45%;
     height: auto;
     border-radius: 50%;
 }
 
 #nome{
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-align: center;
 }
 
 #funcao{
     font-weight: normal;
-    font-size: 0.8em;
+    font-size: 0.75em;
     text-align: center;
     color: var(--cinza-fonte);
 }
+
 
 hr{
     width: 98%;
@@ -86,6 +117,7 @@ hr{
     color: black;
 }
 
+/* Navegação do menu lateral - itens abaixo do cabeçalho */
 
 #menu-lateral > nav{
     display: flex;
@@ -98,7 +130,7 @@ hr{
     display: block;
     margin: 2px auto;
     width: 96%;
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
     color: var(--cinza-fonte);
     font-weight: bold;
@@ -122,13 +154,51 @@ hr{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 6px;
-    margin-left: 5px;
+    gap: 3px;
+    font-size: 0.65em;
 }
+
+
+
+/* Conteúdo principal */
 
 #principal{
-    margin-left: 50px;
+    margin-left: 10px;
     margin-top: 10px;
+    padding-right: 10px;
+    width: auto; 
+
+    min-width: 0;
+    flex: 1;
 }
 
+#btn-menu{
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
+#cabecalho-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-serial{
+    font-size: 0.8em;
+    border: none;
+    padding: 8px;
+    width: 100%;
+}
+
+#search-serial:focus{
+    outline: none;
+}
+
+#logo-search{
+    font-size: 1.2em;
+    color: var(--cinza-fonte);
+    padding-left: 4px;
+}
