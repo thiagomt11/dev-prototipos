@@ -39,3 +39,11 @@
 #principal {
     filter: none !important;
   }
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.9em;
+}
