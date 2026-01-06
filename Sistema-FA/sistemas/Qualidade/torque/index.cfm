@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="estilos/modulos/relatorios.css" />
     <link rel="stylesheet" href="estilos/modulos/requisicoes.css" />
     <link rel="stylesheet" href="estilos/modulos/dashboard.css" />
+    <link rel="stylesheet" href="estilos/modulos/estoque.css" />
+    <link rel="stylesheet" href="estilos/modulos/linha.css" />
     
     <!-- Importação de ícones do Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>

@@ -30,10 +30,12 @@
             </div>
             <div class="card-info">
                 <h2>Linha de Produção</h2>
-                <p>Monitore as ferramentas em uso, status e local de operação.</p>
+                <p>
+                    Monitoramento de ferramentas em uso, status e local de operação.
+                </p>
             </div>
             <div class="card-action">
-                <span>Acessar Linha</span>
+                <span>Acessar Linha de Produção</span>
                 <span class="material-symbols-outlined">arrow_forward</span>
             </div>
         </div>
