@@ -15,3 +15,22 @@
     margin: auto;
     width: 45%;
 }
+
+
+#menu-lateral {
+    width: 230px !important;
+    position: fixed;
+    left: 0;
+}
+
+#btn-fechar {
+    display: none;
+}
+
+#principal {
+    margin-left: 240px;
+}
+
+#btn-menu {
+    display: none;
+}
