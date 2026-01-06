@@ -16,12 +16,15 @@
 
 <body>
     <!-- Menu lateral -->
-    <aside id="menu-lateral">
+    <aside id="menu-lateral" class="menu-oculto">
         <!-- Cabeçalho do menu lateral, contendo a foto, nome e outras informações do usuário -->
+        <button id="btn-fechar" onclick="abrirMenu()">
+            <span class="material-symbols-outlined">close</span>
+        </button>
         <div id="cabecalho-menu">
-            <a href="#">
-                <img src="imagens/user.jpg" alt="Foto do Usuário" id="foto-usuario"/>
-            </a>
+                <a href="#">
+                    <img src="imagens/user.jpg" alt="Foto do Usuário" id="foto-usuario"/>
+                </a>
             <span>
                 <p id="nome">Thiago Martins</p> 
                 <p id="funcao">Assistente de Processos</p>
@@ -84,13 +87,14 @@
     <!-- Div principal que contém o cabeçalho e o conteúdo principal da página -->
     <div id="principal">
         <!-- Cabeçalho (Barra de Pesquisa / Botao de Acesso ao menu lateral) -->
-        <header>
+        <header id="cabecalho-principal">
             <button type="button" id="btn-menu" onclick="abrirMenu()">
-                ☰
+                <span class="material-symbols-outlined">menu</span>
             </button>
 
-            <div>
-                <input type="search" placeholder="Pesquisar"/>
+            <div class="search-box">
+                <span class="material-symbols-outlined" id="logo-search">search</span>
+                <input type="search" placeholder="Digite o serial da ferramenta..." id="search-serial" name="search-serial" />
             </div>
         </header>
         
@@ -98,7 +102,7 @@
         <main >
             <section>
                 <h2>Conteúdo</h2>
-                <p>Aqui entra sua página, cards, tabelas, etc.</p>
+                <p>Aqui entrarão as páginas, cards, tabelas, etc.</p>
             </section>
         </main>
     </div>

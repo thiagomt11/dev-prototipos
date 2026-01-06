@@ -6,12 +6,26 @@ Mobile styles - Conceito de Mobile First - Primeiro desenvolvemos para mobile e 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Transição para aparecer na tela ao atulizar/abrir */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 :root{
     --fonte-principal: 'Inter', sans-serif;
     --azul-escuro: #00005A;
     --azul-secundario: #0000bb;
     --azul-terciario: rgba(29, 29, 87, 0.2);
     --cinza-fonte: #414141;
+    --cinza-claro: #cacaca;
 }
 
 *{
@@ -24,6 +38,7 @@ Mobile styles - Conceito de Mobile First - Primeiro desenvolvemos para mobile e 
 body{
     display: flex;
     flex-direction: row;
+    animation: aparecer 0.3 ease-in;
 }
 
 #menu-lateral{
@@ -33,9 +48,11 @@ body{
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
 
     /*I.A*/
-    transition: width 0.5s ease-in-out; /* Animação suave de 0.45 segundos */
+    transition: width 0.7s ease-in-out; /* Animação suave de 0.45 segundos */
     overflow: hidden;            /* Esconde o texto/ícones quando o menu encolher */
     white-space: nowrap;         /* Impede que o texto quebre linha ao encolher */
+
+    position: relative;
 }
 
 /* I.A */
@@ -43,6 +60,18 @@ body{
     width: 0 !important; /* Força a largura a ser 0 */
     padding: 0 !important; /* Remove preenchimento se houver */
     border: none; /* Remove bordas para sumir completamente */
+}
+
+#btn-fechar {
+    position: absolute;
+    top: 4px; 
+    right: 4px; 
+    background: transparent; 
+    border: none;   
+    cursor: pointer; 
+    color: var(--cinza-fonte);
+    z-index: 10;
+    padding: 5px;
 }
 
 #cabecalho-menu{
@@ -57,11 +86,17 @@ body{
 #cabecalho-menu > a{
     display: flex;
     justify-content: center;
+    text-decoration: none;
+}
+
+#fechar_menu{
+    font-size: 1.5em;
+    color: var(--cinza-fonte);
 }
 
 #foto-usuario{
     margin-top: 10px;
-    width: 32%;
+    width: 30%;
     height: auto;
     border-radius: 50%;
 }
@@ -127,8 +162,46 @@ hr{
 }
 
 #principal{
-    margin-left: 50px;
+    margin-left: 10px;
     margin-top: 10px;
 }
 
+#btn-menu{
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
+#cabecalho-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box{
+    display: flex;
+    flex: row;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+#search-serial{
+    font-size: 1em;
+    border: none;
+    padding: 8px;
+}
+
+#search-serial:focus{
+    outline: none;
+}
+
+#logo-search{
+    font-size: 1.3em;
+    color: var(--cinza-fonte);
+    padding-left: 4px;
+}
