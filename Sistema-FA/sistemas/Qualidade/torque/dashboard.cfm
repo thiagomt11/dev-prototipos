@@ -9,7 +9,7 @@
     
         <div id="filtros-dashboard">
             <div id="btn-filtro-dashboard" onclick="alternarFiltroDashboard()">
-                <button type="button" class="btn-filtro">
+                <button type="button" class="icon-filtro-dashboard">
                     <span class="material-symbols-outlined">Filter_List</span>
                 </button>
                 <span>Filtros</span>

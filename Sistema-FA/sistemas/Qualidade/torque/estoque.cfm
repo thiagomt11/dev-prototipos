@@ -14,7 +14,9 @@
                 Nova Ferramenta
             </button>
         </div>
+        
         <div class="input-filtrar-estoque">
+            <label for="search-serial"><span class="material-symbols-outlined" id="logo-search">search</span></label>
             <input type="text" placeholder="Filtrar por nome..." id="search-model">
             <button class="btn-filtrar-estoque">Filtrar</button>
         </div>
