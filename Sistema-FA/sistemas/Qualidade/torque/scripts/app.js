@@ -104,3 +104,26 @@ document.addEventListener('DOMContentLoaded', function() {
         carregarConteudo('dashboard.cfm');
     }
 });
+
+
+// Função para abrir/fechar o filtro do dashboard
+window.alternarFiltroDashboard = function() {
+    var menuFiltro = document.getElementById('conteudo-btn-filtro');
+    
+    // Alterna a classe 'ativo' (se tem tira, se não tem coloca)
+    menuFiltro.classList.toggle('ativo');
+}
+
+// Opcional: Fechar o menu se clicar fora dele
+document.addEventListener('click', function(event) {
+    var menuFiltro = document.getElementById('conteudo-btn-filtro');
+    var btnFiltro = document.getElementById('btn-filtro-dashboard');
+
+    // Verifica se o menu existe e está aberto
+    if (menuFiltro && menuFiltro.classList.contains('ativo')) {
+        // Se o clique NÃO foi no menu E NÃO foi no botão...
+        if (!menuFiltro.contains(event.target) && !btnFiltro.contains(event.target)) {
+            menuFiltro.classList.remove('ativo'); // Fecha o menu
+        }
+    }
+});

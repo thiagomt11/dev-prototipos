@@ -109,14 +109,13 @@ body{
     color: var(--cinza-fonte);
 }
 
-
-hr{
-    width: 98%;
-    margin: auto;
-    border-radius: 20px;
-    color: black;
+#separador-menu{
+    width:98%; 
+    color:black; 
+    height:1px;
+    text-align: center;
+    margin: 0 auto;
 }
-
 /* Navegação do menu lateral - itens abaixo do cabeçalho */
 
 #menu-lateral > nav{

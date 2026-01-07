@@ -48,7 +48,8 @@
                 <p id="funcao">Assistente de Processos</p>
             </span>
         </div>
-        <hr>
+        
+        <hr id="separador-menu"/>
         <!-- Itens do menu lateral, para acessar o menu principal, estoque, menu de calibração, relatoório etc. -->
         <nav>
             <a href="#" onclick="carregarConteudo('dashboard.cfm')">
@@ -64,8 +65,6 @@
                     <span>Controle de Ferramentas</span>
                 </div>
             </a>
-
-
             
             <a href="#" onclick="carregarConteudo('monitorias.cfm')">
                 <div class="icon">
