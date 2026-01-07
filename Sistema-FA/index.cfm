@@ -72,7 +72,7 @@
                 </div>
             </section>
 
-            <a class= "card-link" href="sistemas/Qualidade/menu_qualidade.html" target="_blank">
+            <a class= "card-link" onclick="carregarConteudo('menu_qualidade.cfm')">
                 <section id="qualidade" class="card">
                     <img src="imagens/img-qualidade.jpeg" alt="imagem qualidade">
                     <div class="card-content">
