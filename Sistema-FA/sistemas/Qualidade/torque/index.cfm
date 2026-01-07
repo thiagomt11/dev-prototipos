@@ -65,12 +65,7 @@
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('calibracao.cfm')">
-                <div class="icon">
-                    <span class="material-symbols-outlined">check</span>
-                    <span>Calibração</span>
-                </div>
-            </a>
+
             
             <a href="#" onclick="carregarConteudo('monitorias.cfm')">
                 <div class="icon">
@@ -93,7 +88,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a href="#" onclick="carregarConteudo('toolsnet.cfm')">
                 <div class="icon">
                     <span class="material-symbols-outlined">Database</span>
                     <span>ToolsNet</span>

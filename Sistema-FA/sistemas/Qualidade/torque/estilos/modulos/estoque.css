@@ -5,7 +5,7 @@
 }
 
 /* Cabeçalho */
-.pagina-ferramentas .topo-modulo {
+.pagina-ferramentas .titulo-estoque {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +18,7 @@
 }
 
 /* Botões */
-.pagina-ferramentas .btn-adicionar {
+.pagina-ferramentas .btn-adicionar-estoque {
     background-color: #007bff;
     color: white;
     border: none;
@@ -30,7 +30,7 @@
     gap: 5px;
 }
 
-.pagina-ferramentas .btn-adicionar:hover {
+.pagina-ferramentas .btn-adicionar-estoque:hover {
     background-color: #0056b3;
 }
 
@@ -38,7 +38,7 @@
 
 /* Tabela */
 
-.tabela-dados {
+.tabela-estoque {
     width: 100%;
     border-collapse: collapse;
     background: white;
@@ -48,18 +48,18 @@
     margin-top: 10px;
 }
 
-.tabela-dados tr{
+.tabela-estoque tr{
     box-sizing: border-box;
 }
 
-.pagina-ferramentas .tabela-dados th,
-.pagina-ferramentas .tabela-dados td {
+.pagina-ferramentas .tabela-estoque th,
+.pagina-ferramentas .tabela-estoque td {
     padding: 12px 15px;
     border-bottom: 1px solid #eee;
     text-align: left;
 }
 
-.pagina-ferramentas .tabela-dados th {
+.pagina-ferramentas .tabela-estoque th {
     background-color: #f1f1f1;
     font-weight: 600;
 }
@@ -89,7 +89,7 @@
 }
 
 
-.input-filtrar{
+.input-filtrar-estoque{
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -18,7 +18,7 @@
 
 /* Deixar menu lateral fixo*/
 #menu-lateral {
-    width: 230px !important;
+    width: 300px !important;
     position: fixed;
     left: 0;
 }
@@ -28,7 +28,7 @@
 }
 
 #principal {
-    margin-left: 240px;
+    margin-left: 310px;
 }
 
 #btn-menu {
@@ -45,6 +45,27 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3px;
-    font-size: 0.9em;
+    gap: 4px;
+    font-size: 1.1em;
+}
+
+/*Aumenta o tamanho da foto e do nome/função do usuário*/
+#foto-usuario{
+    margin-top: 10px;
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#nome{
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#funcao{
+    font-weight: normal;
+    font-size: 0.85em;
+    text-align: center;
+    color: var(--cinza-fonte);
 }

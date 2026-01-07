@@ -28,14 +28,35 @@
             <div class="ferr-icon">
                 <span class="material-symbols-outlined">precision_manufacturing</span>
             </div>
+
             <div class="card-info">
                 <h2>Linha de Produção</h2>
                 <p>
                     Monitoramento de ferramentas em uso, status e local de operação.
                 </p>
             </div>
+
             <div class="card-action">
                 <span>Acessar Linha de Produção</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+        </div>
+
+        <!-- Cartão de Calibração de Ferramentas -->
+        <div class="option-card" onclick="carregarConteudo('calibracao.cfm')">
+            <div class="ferr-icon">
+                <span class="material-symbols-outlined">check</span>
+            </div>
+
+            <div class="card-info">
+                <h2>Calibração</h2>
+                <p>
+                    Controle de calibração e histórico de ferramentas.
+                </p>
+            </div>
+
+            <div class="card-action">
+                <span>Acessar Calibração</span>
                 <span class="material-symbols-outlined">arrow_forward</span>
             </div>
         </div>

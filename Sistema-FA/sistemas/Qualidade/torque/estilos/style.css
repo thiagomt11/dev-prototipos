@@ -198,6 +198,12 @@ body.menu-aberto #principal{
     width: 100%;
 }
 
+hr{
+    width:1px; 
+    height:20px; 
+    display:inline-block;
+}
+
 #search-serial:focus{
     outline: none;
 }

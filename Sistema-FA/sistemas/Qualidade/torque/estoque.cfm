@@ -3,26 +3,26 @@
 <div class="pagina-ferramentas fade-in">
     
     <header>
-        <div class="topo-modulo">
+        <div class="titulo-estoque">
             <div>
                 <h2>Controle de Ferramentas</h2>
-                <p class="subtitulo">Gerencie o inventário e status de calibração.</p>
+                <p class="subtitulo-estoque">Gerencie o inventário e status de calibração.</p>
             </div>
         
-            <button class="btn-adicionar">
+            <button class="btn-adicionar-estoque">
                 <span class="material-symbols-outlined">add</span>
                 Nova Ferramenta
             </button>
         </div>
-        <div class="input-filtrar">
+        <div class="input-filtrar-estoque">
             <input type="text" placeholder="Filtrar por nome..." id="search-model">
-            <button class="btn-filtrar">Filtrar</button>
+            <button class="btn-filtrar-estoque">Filtrar</button>
         </div>
     </header>
 
 
     <main>
-        <table class="tabela-dados">
+        <table class="tabela-estoque">
             <thead>
                 <tr>
                     <th>Serial</th>
