@@ -103,7 +103,7 @@
     </aside>
 
     <!-- Div principal que contém o cabeçalho e o conteúdo principal da página -->
-    <div id="principal" style="filter: none;">
+    <div id="principal">
         <!-- Cabeçalho (Barra de Pesquisa / Botao de Acesso ao menu lateral) -->
         <header id="cabecalho-principal">
             <button type="button" id="btn-menu" onclick="abrirMenu()">

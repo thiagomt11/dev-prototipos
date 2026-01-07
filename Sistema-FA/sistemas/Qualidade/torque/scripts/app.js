@@ -9,19 +9,23 @@ function abrirMenu() {
   document.body.classList.toggle('menu-aberto', !isOculto);
 }
 
-const mql = window.matchMedia('(min-width: 1280px)');
+const mql = window.matchMedia('(min-width: 993px)');
 
 function syncLayout(e) {
-  if (e.matches) { // >=1280
-    document.body.classList.remove('menu-aberto');
+    if (e.matches) { // >=993
+        document.body.classList.remove('menu-aberto');
 
-    // opcional: garanta que o menu não fique com classe de "oculto" no desktop
-    document.getElementById('menu-lateral')?.classList.remove('menu-oculto');
+        // opcional: garanta que o menu não fique com classe de "oculto" no desktop
+        document.getElementById('menu-lateral')?.classList.remove('menu-oculto');
 
-    // se você já aplicou filter inline no passado, limpa também:
-    const principal = document.getElementById('principal');
-    if (principal) principal.style.filter = '';
-  }
+        // se você já aplicou filter inline no passado, limpa também:
+        const principal = document.getElementById('principal');
+            if (principal) principal.style.filter = '';
+    }
+    else {
+        document.body.classList.remove('menu-aberto');
+        document.getElementById('menu-lateral')?.classList.add('menu-oculto');
+    }
 }
 
 mql.addEventListener('change', syncLayout);

@@ -16,7 +16,7 @@
     width: 45%;
 }
 
-
+/* Deixar menu lateral fixo*/
 #menu-lateral {
     width: 230px !important;
     position: fixed;
@@ -35,11 +35,12 @@
     display: none;
 }
 
-
+/*Tira o blur*/
 #principal {
     filter: none !important;
   }
 
+/*Aumenta o tamanho dos ícones e textos do menu lateral abaixo do cabeçalho*/
 .icon{
     display: flex;
     flex-direction: row;

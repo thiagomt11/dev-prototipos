@@ -168,10 +168,14 @@ hr{
 
     min-width: 0;
     flex: 1;
-
-    filter: blur(5px);
+    
     transition: filter 0.3s ease;
 }
+
+body.menu-aberto #principal{
+    filter: blur(5px);
+}
+/* Cabeçalho principal (barra de pesquisa e botão do menu lateral) */
 
 #btn-menu{
     font-size: 1.5em;

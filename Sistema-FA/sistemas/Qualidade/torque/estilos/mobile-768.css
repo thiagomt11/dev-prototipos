@@ -59,3 +59,11 @@ Dispositivos entre 481px e 768px (tablets e celulares grandes)
     gap: 3px;
     font-size: 0.65em;
 }
+
+@media (orientation: landscape) {
+    #menu-lateral {
+        height: 100vh;
+        overflow-y: auto;
+        /*-webkit-overflow-scrolling: touch; - A propriedade -webkit-overflow-scrolling: touch foi criada para melhorar a experiência de rolagem em dispositivos iOS mais antigos, mas está obsoleta e não é mais necessária.*/
+    }
+}
