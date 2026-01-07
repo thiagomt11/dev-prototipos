@@ -14,8 +14,8 @@
                 Nova Ferramenta
             </button>
         </div>
-        <div class="filtros-container">
-            <input type="text" placeholder="Filtrar por nome..." class="input-filtro">
+        <div class="input-filtrar">
+            <input type="text" placeholder="Filtrar por nome..." id="search-model">
             <button class="btn-filtrar">Filtrar</button>
         </div>
     </header>
