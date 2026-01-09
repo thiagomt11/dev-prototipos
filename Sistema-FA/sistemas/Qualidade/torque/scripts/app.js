@@ -106,24 +106,47 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Função para abrir/fechar o filtro do dashboard
-window.alternarFiltroDashboard = function() {
-    var menuFiltro = document.getElementById('conteudo-btn-filtro');
-    
-    // Alterna a classe 'ativo' (se tem tira, se não tem coloca)
-    menuFiltro.classList.toggle('ativo');
-}
+//ABRIR MENU DE FILTROS NO DASHBOARD E ESTOQUE
 
-// Opcional: Fechar o menu se clicar fora dele
-document.addEventListener('click', function(event) {
-    var menuFiltro = document.getElementById('conteudo-btn-filtro');
-    var btnFiltro = document.getElementById('btn-filtro-dashboard');
+document.addEventListener('click', function (event) {
+  // --- DASHBOARD ---
+  const menuDash = document.getElementById('conteudo-btn-filtro');
+  const btnDash  = document.getElementById('btn-filtro-dashboard');
 
-    // Verifica se o menu existe e está aberto
-    if (menuFiltro && menuFiltro.classList.contains('ativo')) {
-        // Se o clique NÃO foi no menu E NÃO foi no botão...
-        if (!menuFiltro.contains(event.target) && !btnFiltro.contains(event.target)) {
-            menuFiltro.classList.remove('ativo'); // Fecha o menu
-        }
+  if (menuDash && menuDash.classList.contains('ativo')) {
+    // só fecha se o botão existir e o clique foi fora
+    const clicouNoBtnDash = btnDash ? btnDash.contains(event.target) : false;
+
+    if (!menuDash.contains(event.target) && !clicouNoBtnDash) {
+      menuDash.classList.remove('ativo');
     }
+  }
+
+  // --- ESTOQUE ---
+  const menuEst = document.getElementById('conteudo-btn-filtro-estoque');
+  const btnEst  = document.getElementById('btn-filtro-estoque');
+
+  if (menuEst && menuEst.classList.contains('ativo')) {
+    const clicouNoBtnEst = btnEst ? btnEst.contains(event.target) : false;
+
+    if (!menuEst.contains(event.target) && !clicouNoBtnEst) {
+      menuEst.classList.remove('ativo');
+    }
+  }
 });
+
+// ====== FILTRO ESTOQUE ======
+window.alternarFiltroEstoque = function () {
+  const menu = document.getElementById('conteudo-btn-filtro-estoque');
+
+  if (!menu) return;
+
+  menu.classList.toggle('ativo');
+};
+
+// ====== FILTRO DASHBOARD ======
+window.alternarFiltroDashboard = function () {
+  const menu = document.getElementById('conteudo-btn-filtro');
+    if (!menu) return;
+    menu.classList.toggle('ativo');
+};

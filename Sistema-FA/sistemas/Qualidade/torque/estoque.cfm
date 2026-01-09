@@ -12,53 +12,19 @@
         
         <section class="filtros-estoque">
             <div class="input-filtrar-estoque">
-                <label for="search-serial-estoque"><span class="material-symbols-outlined" id="logo-search">search</span></label>
+                <label for="search-serial-estoque"><span class="material-symbols-outlined" id="logo-search-estoque">search</span></label>
                 <input type="text" placeholder="Buscar por serial..." id="search-serial-estoque">
             </div>
 
             <div class="filtro-e-add-estoque">
                 <!-- Botão de Filtros Avançados-->
-                
                 <div id="filtros-avancados-estoque">
-                    <div id="btn-filtro-estoque" onclick="alternarFiltroDashboard()">
+                    <div id="btn-filtro-estoque" onclick="alternarFiltroEstoque()">
                         <button type="button" class="icon-filtro-estoque">
                             <span class="material-symbols-outlined">Filter_List</span>
                         </button>
-                        <span>Filtros</span>
+                        <span>Filtros Avançados</span>
                     </div>
-            
-                    <section id="conteudo-btn-filtro">
-                        <div class="filtro-item">
-                            <label for="filtro-periodo">Período:</label>
-                            <select id="filtro-periodo" name="filtro-periodo">
-                                <option value="hoje">Hoje</option>
-                                <option value="semana">Esta Semana</option>
-                                <option value="mes">Este Mês</option>
-                                <option value="ano">Este Ano</option>
-                            </select>
-                        </div>
-            
-                        <div class="filtro-item">
-                            <label for="filtro-departamento">Departamento:</label>
-                            <select id="filtro-departamento" name="filtro-departamento">
-                                <option value="todos">Todos</option>
-                                <option value="manutencao">Manutenção</option>
-                                <option value="produçao">Produção</option>
-                                <option value="qualidade">Qualidade</option>
-                            </select>
-                        </div>
-            
-                        <div class="filtro-item">
-                            <label for="filtro-tipo-ferramenta">Tipo de Ferramenta:</label>
-                            <select id="filtro-tipo-ferramenta" name="filtro-tipo-ferramenta">
-                                <option value="todos">Todos</option>
-                                <option value="torquimetros">Torquímetros</option>
-                                <option value="shut-off">Apertadeiras Shut-Off</option>
-                                <option value="eletronicas">Apertadeiras Eletrônicas</option>
-                                <option value="outros">Outros</option>
-                            </select>
-                        </div>
-                    </section>
                 </div>
                 
                 <!-- Botão Adicionar Ferramenta-->
@@ -66,6 +32,51 @@
                     <span class="material-symbols-outlined">add</span>
                     Nova Ferramenta
                 </button>
+            </div>
+        </section>
+
+        <!-- Conteúdo do Filtro Avançado -->
+        <section id="conteudo-btn-filtro-estoque">
+            <div class="filtro-item-estoque">
+                <label for="filtro-periodo">Período:</label>
+                <select id="filtro-periodo" name="filtro-periodo">
+                    <option value="hoje">Hoje</option>
+                    <option value="semana">Esta Semana</option>
+                    <option value="mes">Este Mês</option>
+                    <option value="ano">Este Ano</option>
+                </select>
+            </div>
+
+            <div class="filtro-item-estoque">
+                <label for="filtro-departamento">Departamento:</label>
+                <select id="filtro-departamento" name="filtro-departamento">
+                    <option value="todos">Todos</option>
+                    <option value="manutencao">Manutenção</option>
+                    <option value="produçao">Produção</option>
+                    <option value="qualidade">Qualidade</option>
+                </select>
+            </div>
+
+            <div class="filtro-item-estoque">
+                <label for="filtro-tipo-ferramenta">Tipo de Ferramenta:</label>
+                <select id="filtro-tipo-ferramenta" name="filtro-tipo-ferramenta">
+                    <option value="todos">Todos</option>
+                    <option value="torquimetros">Torquímetros</option>
+                    <option value="shut-off">Apertadeiras Shut-Off</option>
+                    <option value="eletronicas">Apertadeiras Eletrônicas</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="filtro-item-estoque">
+                <label for="filtro-modelo-ferramenta">Modelo da Ferramenta:</label>
+                <select id="filtro-modelo-ferramenta" name="filtro-modelo-ferramenta">
+                    <option value="todos">Todos</option>
+                    <option value="torquimetros">BFT123F</option>
+                    <option value="shut-off">QSP50N3</option>
+                    <option value="eletronicas">QSP100N4</option>
+                    <option value="outros">Outros</option>
+                </select>
             </div>
         </section>
     </header>
