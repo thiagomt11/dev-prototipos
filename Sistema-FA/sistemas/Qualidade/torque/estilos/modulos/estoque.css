@@ -5,51 +5,117 @@
     animation: aparecer 0.5s ease-out;
 }
 
-/* Cabeçalho */
-.pagina-ferramentas .titulo-estoque {
+/* --------------------------- HEADER ----------------------------*/
+/*-----Titulo e subtitulo-----*/
+.titulo-estoque {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-
-.pagina-ferramentas h2 {
+.titulo-estoque h2 {
     margin: 0;
     color: #333;
 }
 
-/* Botões */
+.subtitulo-estoque{
+    color: #666;
+    font-size: 14px;
+}
+
+
+/*-----Filtros-----*/
+/*Div geral de filtros e botão de adicionar*/
+.filtros-estoque{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Input de busca serial*/
+.input-filtrar-estoque{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    gap: 10px;
+    padding: 5px;
+}
+
+#search-serial-estoque{
+    width: 250px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*Botões de filtro e adicionar ferramenta*/
+.filtro-e-add-estoque{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/*OBS: Botão de filtro já tem estilo, pega do dashboard.css*/
+
+
+#filtros-avancados-estoque {
+    position: relative;
+    display: inline-block;
+}
+
+/*Div com botao de filtros dashboard e texto*/
+#btn-filtro-estoque{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    color: var(--cinza-fonte);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 6px 13px;
+    background-color: var(--azul-secundario);
+    color: white;
+}
+
+/*Botao filtro dashboard*/
+.icon-filtro-estoque{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+}
+
+#btn-filtro-estoque:hover{
+    color: white;
+    cursor: pointer;
+    background-color: rgb(31, 31, 255);
+    transition: background-color 0.25s ease;
+}
+
+
 .btn-adicionar-estoque {
     background-color: var(--azul-secundario);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 6px 13px;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 5px;
+    font-size: 1em;
 }
 
 .btn-adicionar-estoque:hover {
     background-color: rgb(31, 31, 255);
 }
 
-.btn-filtrar-estoque{
-    background-color: var(--azul-secundario);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bolder;
-}
+/* --------------------------- MAIN ----------------------------*/
 
-.btn-filtrar-estoque:hover {
-    background-color: rgb(31, 31, 255);
-}
-
-/* Tabela */
+/*---------- Tabela ---------*/
 
 .tabela-estoque {
     width: 100%;
@@ -65,26 +131,19 @@
     box-sizing: border-box;
 }
 
-.pagina-ferramentas .tabela-estoque th,
-.pagina-ferramentas .tabela-estoque td {
+.tabela-estoque th, .tabela-estoque td {
     padding: 12px 15px;
     border-bottom: 1px solid #eee;
     text-align: left;
 }
 
-.pagina-ferramentas .tabela-estoque th {
+.tabela-estoque th {
     background-color: #f1f1f1;
     font-weight: 600;
 }
 
-/* Tags de Status */
-.pagina-ferramentas .tag {
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.85em;
-    font-weight: bold;
-}
-.pagina-ferramentas .tag.disponivel {
+
+.tag.disponivel {
     background: #d4edda;
     color: #155724;
 }
@@ -101,18 +160,9 @@
     border-radius: 50%;
 }
 
-#search-model{
-    width: 250px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.input-filtrar-estoque{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 350px;
-    gap: 10px;
-    padding: 5px;
+.tag.disponivel{
+    background: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    padding: 2px 6px;
 }
