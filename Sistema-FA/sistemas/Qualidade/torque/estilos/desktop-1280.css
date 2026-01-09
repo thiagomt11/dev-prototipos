@@ -29,6 +29,7 @@
 
 #principal {
     margin-left: 310px;
+    background-color: rgba(202, 231, 250, 0.147);
 }
 
 #btn-menu {
@@ -38,6 +39,7 @@
 /*Tira o blur*/
 #principal {
     filter: none !important;
+    background-color: rgba(202, 231, 250, 0.147);
   }
 
 /*Aumenta o tamanho dos ícones e textos do menu lateral abaixo do cabeçalho*/

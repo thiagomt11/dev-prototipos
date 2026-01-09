@@ -33,9 +33,13 @@
 /* Grid Layout */
 .options-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 caixas em cima */
     gap: 25px;
     margin-top: 20px;
+}
+
+.options-grid > .option-card:last-child:nth-child(3n + 1) {
+  grid-column: 1 / -1;
 }
 
 /* Estilo dos Cards */
@@ -127,4 +131,24 @@
 
 .option-card:hover .card-action .material-symbols-outlined {
     transform: translateX(5px);
+}
+
+@media (max-width: 980px) {
+  .options-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* agora “sozinho na linha” acontece a cada 2 */
+  .options-grid > .option-card:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  .options-grid > .option-card {
+    grid-column: auto;
+  }
 }

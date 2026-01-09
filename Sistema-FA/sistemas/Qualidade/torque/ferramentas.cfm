@@ -61,6 +61,25 @@
             </div>
         </div>
 
+        <!-- Cartão de Manutenção de Ferramentas -->
+        <div class="option-card" onclick="carregarConteudo('manutencao.cfm')">
+            <div class="ferr-icon">
+                <span class="material-symbols-outlined">build</span>
+            </div>
+
+            <div class="card-info">
+                <h2>Manutenção</h2>
+                <p>
+                    Controle de manutenção de ferramentas e lucros associados.
+                </p>
+            </div>
+
+            <div class="card-action">
+                <span>Acessar Manutenção</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+        </div>
+
     </div>
 </div>
 

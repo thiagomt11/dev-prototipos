@@ -12,10 +12,6 @@
     animation: aparecer 0.5s ease-out;
 }
 
-#principal{
-    background-color: rgba(202, 231, 250, 0.147);
-}
-
 /*---------------- Header  ------------------*/
 #dashboard-operacional header {
     display: flex;
@@ -183,6 +179,7 @@
 #atividades-recentes-dashboard h2{
   font-size: 1.15rem;
   margin: 0 0 12px 0;
+  min-height: 0;
 }
 
 #graficos-dashboard,
@@ -202,7 +199,6 @@ ul {
 }
 
 /*Graficos */
-
 
 #graficos-dashboard{
     flex: 2;
@@ -246,6 +242,7 @@ ul {
 /*Atividades recentes*/
 
 #atividades-recentes-dashboard{
+    overflow: hidden;
     flex: 1;
 }
 
@@ -265,6 +262,12 @@ ul {
     border-bottom: 1px solid rgba(0,0,0,.1); 
 }
 
+.acao-dash{
+    overflow-wrap: anywhere;  /* quebra até em strings grandes */
+    word-break: break-word;   /* fallback */
+    white-space: normal;
+}
+
 .data-dash{
     font-size: 0.75rem;
     color: rgba(0,0,0,.5);
@@ -280,7 +283,6 @@ ul {
   margin-top: 10px;
   font-weight: 600;
   cursor: pointer;
-  user-select: none;
   color: #0b5ed7;
   padding-left: 18px;
 }
@@ -289,11 +291,87 @@ ul {
   text-decoration: underline;
 }
 
-@media (max-width: 980px){
+/*----------- Responsividade ---------------*/
+
+/*Celulares*/
+@media screen and (max-width: 480px) {
+    
+    #titulo-dashboard > h1{
+        font-size: 1.5em;
+    }
+    
+    #dashboard-operacional{
+        padding: 15px 10px 15px 15px;
+    }
+
+    /*Deixar o botão de filtro abaixo do título*/
+    #dashboard-operacional header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #conteudo-btn-filtro{
+        left: 0;  /* Alinhado à direita do botão */
+        width: 250px; /* Largura da janelinha */
+        z-index: 1000; /* Garante que fique por cima de tudo */
+}
+    
+    #cartoes-dashboard{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cartao-dashboard{
+        flex: 1 1 100%;
+    }
+
+    #graficos-e-atividades-recentes{
+        flex-direction: column;
+    }
+
+    #graficos-dashboard,
+    #atividades-recentes-dashboard{
+        height: auto;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    #cartoes-dashboard{
+        flex-wrap: wrap;
+    }
+
+    #titulo-dashboard > h1{
+        font-size: 1.6em;
+    }
+
+    .cartao-dashboard{
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    #graficos-e-atividades-recentes{
+        flex-direction: column;
+    }
+
+    #graficos-dashboard,
+    #atividades-recentes-dashboard{
+        height: auto;
+    }
+}
+
+
+
+@media screen and (min-width: 993px) and (max-width: 1279px) {
+    #cartoes-dashboard{
+        flex-wrap: wrap;
+    }
   #graficos-e-atividades-recentes{
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
-  .grafico-placeholder{
-    min-height: 240px;
-  }
+
+  .cartao-dashboard{
+    flex: 1 1 calc(50% - 10px);
+}
+
 }
