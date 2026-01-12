@@ -1,3 +1,4 @@
+<cfprocessingdirective pageEncoding="utf-8">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,7 @@
                     <p>Sistema de gestão - Trim Shop</p>
                 </div>
                 
-                <form action="index.html" method="post">
+                <form action="index.cfm" method="post">
                     <div id="usuario">
                         <label>Usuário</label>
                         <input type="text" name="username" placeholder="Digite seu usuário"  class="input-box">

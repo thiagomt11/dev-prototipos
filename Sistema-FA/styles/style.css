@@ -107,7 +107,7 @@ menu{
     opacity: 0;
     transform: translateY(-10px);
     visibility: hidden;
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition: opacity 0.17s ease, transform 0.25s ease;
 }
 
 #itens.ativo {
@@ -125,8 +125,8 @@ menu{
 
 #itens div a{
     text-decoration: none;
-    color: #00005A;
-    font-weight: bolder;
+    color: black;
+    font-weight: normal;
 }
 
 #itens div:hover{
@@ -141,7 +141,6 @@ menu{
 .txt-itens{
     padding: 0px 0;
     cursor: pointer;
-    display: flex;
 }
 
 #logout a:hover{

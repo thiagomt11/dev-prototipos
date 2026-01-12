@@ -1,3 +1,5 @@
+<cfprocessingdirective pageEncoding="utf-8">
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -104,23 +106,24 @@
     <script>
         const itens = document.getElementById('itens')
 
-        function mudouTamanho() {
-            if (window.innerWidth >= 769) {
-                itens.classList.add('ativo')
-            } 
-            else {
-                itens.classList.remove('ativo')
-            }
+        // Garante que o menu sempre inicie fechado
+        function fecharMenu() {
+            itens.classList.remove('ativo')
         }
 
+        function mudouTamanho() {
+            // Ao redimensionar, sempre fecha o menu
+            fecharMenu()
+        }
 
         function clickMenu() {
             itens.classList.toggle('ativo')
         }
 
         window.addEventListener('resize', mudouTamanho)
-        window.addEventListener('load', mudouTamanho)
+        window.addEventListener('load', fecharMenu)
     </script>
+
 
 </body>
 </html>
