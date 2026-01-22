@@ -217,3 +217,9 @@ hr{
     color: var(--cinza-fonte);
     padding-left: 4px;
 }
+
+@media (max-height:620px){
+    #principal{
+        max-height: 90vh;
+    }
+}
